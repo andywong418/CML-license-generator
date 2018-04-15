@@ -45,7 +45,6 @@ class Home extends React.Component {
     })
   }
   render() {
-    console.log("state", this.state);
     return (
       <div>
         <Header />

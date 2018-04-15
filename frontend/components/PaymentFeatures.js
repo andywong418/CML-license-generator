@@ -5,7 +5,7 @@ const PaymentFeatures = ({ match, contentName, contentType, rateType, rate, curr
   return (
     <div className="content-features text-center">
       <h1>Payment Features</h1>
-      <p className="header-description"> This section contains information about how the content will be monetized. </p>
+      <p className="header-description"> This section contains information about how the content will be monetized. All information is required</p>
       <div className="form-group">
         <label>Name of the content</label>
         <input className="form-control" name="contentName" placeholder="Enter name" value={contentName} onChange={handleInputChange} />
@@ -28,7 +28,7 @@ const PaymentFeatures = ({ match, contentName, contentType, rateType, rate, curr
         <select className="form-control" name="rateType" value={rateType} onChange={handleInputChange}>
           <option value=""> Select how the user should be charged</option>
           <option value="download">Per Download</option>
-          <option value="second">Per Second,</option>
+          <option value="second">Per Second</option>
           <option value="byte">Per Byte</option>
           <option value="use">Per Use</option>
           <option value="revocation">Per Revocation</option>
@@ -47,7 +47,7 @@ const PaymentFeatures = ({ match, contentName, contentType, rateType, rate, curr
         <input className="form-control" name="paymentPointer" placeholder="Enter Payment Pointer" name="paymentPointer" value={paymentPointer} onChange={handleInputChange}/>
       </div>
       <Link to={`/`}><button type="button" className="btn btn-primary">Back</button></Link>
-      <Link to={`/generate-license`}><button type="button" className="btn btn-success finish">Finish</button></Link>
+      {contentName && contentType && rateType && rate && currency && paymentPointer ? <Link to={`/generate-license`}><button type="button" className="btn btn-success finish">Finish</button></Link> : null}
 
     </div>
   )

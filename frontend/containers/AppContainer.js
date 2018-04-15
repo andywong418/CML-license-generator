@@ -21,7 +21,6 @@ const App = ({ name }) => {
 };
 const NonBlockApp = withRouter(App);
 const AppContainer = ({history, store, name}) => {
-  console.log("history", history)
   return(
     <div>
           <ConnectedRouter history={history}>
