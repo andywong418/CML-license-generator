@@ -7,21 +7,21 @@ import { Route } from 'react-router-dom';
 import AnotherPage from '../components/AnotherPage';
 import {ConnectedRouter} from 'react-router-redux';
 import {withRouter} from 'react-router';
-const HomeWrapper = ({name}) => {
+const HomeWrapper = ({name, match}) => {
   return (
-    <Home name={name} />
+    <Home name={name} match={match}/>
   )
 }
 const App = ({ name }) => {
     return (
         <div>
-            <Route exact path="/" component={HomeWrapper}/>
-            <Route path="/anotherPage" component={AnotherPage}/>
+            <Route path="/" component={HomeWrapper}/>
         </div>
     );
 };
 const NonBlockApp = withRouter(App);
 const AppContainer = ({history, store, name}) => {
+  console.log("history", history)
   return(
     <div>
           <ConnectedRouter history={history}>

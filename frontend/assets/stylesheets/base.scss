@@ -2,3 +2,119 @@ h1 {
   font-family: helvetica;
   font-weight: 200;
 }
+
+.header-nav {
+    background: #2574A9;
+    height: 100px;
+}
+.navbar-brand, .navbar-brand:active, .navbar-brand:hover {
+  font-size: 30px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+}
+
+.header-logo {
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid white;
+  vertical-align: middle;
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-title p {
+  margin-top: 0;
+  margin-bottom: -10px;
+  margin: -5px -10px -10px 10px;
+}
+
+.nav-pills {
+  position: absolute;
+  color: white;
+  right: 0;
+  font-size: 20px;
+}
+.nav-pills .nav-item, .nav-item:active, .nav-item:hover {
+  color: white
+}
+
+.license-form {
+  margin-top: 50px;
+}
+
+.owner-radio {
+  display: block;
+}
+
+.content-features, .license-features {
+  border: 1px solid black;
+  width: 80%;
+  margin-left: 10%;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.content-features h1, .header-description {
+  text-align: center
+}
+.content-features h1 {
+  font-weight: bold;
+}
+
+.content-features .form-group {
+  text-align: left;
+}
+
+.header-description {
+  color: grey;
+}
+
+.license-features button {
+  margin-top: 20px;
+}
+.license-features .form-control {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.generate-license textarea {
+  width: 500px;
+  height: 250px;
+}
+.finish {
+  margin-left: 10px;
+}
+
+footer {
+  display: flex;
+  height: 200px;
+  background: #2574A9;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 50px;
+  position: absolute;
+  width: 100%;
+}
+
+.link-container {
+  display: flex;
+}
+.link-container p a{
+  margin-left: 10px;
+  color: white;
+}
+
+footer p a:hover {
+  color: white;
+}
+
+.footer-wrapper {
+  width: 100%;
+
+}
