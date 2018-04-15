@@ -1,10 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const LicenseFeatures = ({ match, owner, ownerClick, shareable, shareableClick, ownerName, ownerUrl, handleInputChange }) => {
+const LicenseFeatures = ({ match, owner, ownerClick, shareable, shareableClick, ownerName, ownerUrl, candidateName, candidateUrl, handleInputChange }) => {
   const activeOwnerTrue = owner === 'Yes' ? "btn btn-secondary active" : "btn btn-secondary";
   const activeOwnerFalse = owner === 'No' ? "btn btn-secondary active" : "btn btn-secondary";
-
   const shareableTrue = shareable === 'Yes' ? "btn btn-secondary active" : "btn btn-secondary";
   const shareableFalse = shareable === 'No' ? "btn btn-secondary active" : "btn btn-secondary";
   return (
@@ -49,8 +48,7 @@ const LicenseFeatures = ({ match, owner, ownerClick, shareable, shareableClick, 
         :
         null
       }
-      {
-        owner === 'No' ?
+      {owner === 'No' ?
         <div className="owner-info">
           <div className="form-group">
             <label>Owner of the work</label>
@@ -72,7 +70,7 @@ const LicenseFeatures = ({ match, owner, ownerClick, shareable, shareableClick, 
         :
         null
       }
-      {owner && ownerName && ownerUrl && shareable || !owner && ownerName && ownerUrl ? <Link to={`/payment-features`}><button type="button" className="btn btn-primary">Next</button></Link> : null}
+      {owner && ownerName && ownerUrl && shareable || owner === 'No' && ownerName && ownerUrl && candidateUrl && candidateName? <Link to={`/payment-features`}><button type="button" className="btn btn-primary">Next</button></Link> : null}
 
 
     </div>
